@@ -12,8 +12,6 @@ export const SearchBox = () => {
     dispatch(setContactsFilter(normalizedValue));
   };
 
-  // const value = useSelector(state => state.filters);
-
   return (
     <div>
       <p className={css.item}>Find contacts by name</p>
