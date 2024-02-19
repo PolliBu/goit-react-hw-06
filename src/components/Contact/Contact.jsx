@@ -4,7 +4,7 @@ import css from './Contact.module.css';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contactsSlice';
 
-export const Contact = ({ contact: { name, number, id } }) => {
+const Contact = ({ contact: { name, number, id } }) => {
   const dispatch = useDispatch();
   const handleDelete = () => dispatch(deleteContact(id));
 
@@ -24,3 +24,5 @@ export const Contact = ({ contact: { name, number, id } }) => {
     </div>
   );
 };
+
+export default Contact;

@@ -12,6 +12,9 @@ const filtersSlice = createSlice({
       state.name = action.payload;
     },
   },
+  // const visibleUsers = contacts.filter(contact =>
+  //   contact.name.toLowerCase().includes(nameFilter.toLowerCase()),
+  // );
 });
 
 export const { setContactsFilter } = filtersSlice.actions;

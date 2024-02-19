@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setContactsFilter } from '../../redux/filtersSlice';
 import { getContactsFilter } from '../../redux/selectors';
 
-export const SearchBox = () => {
+const SearchBox = () => {
   const dispatch = useDispatch();
   const filter = useSelector(getContactsFilter);
 
@@ -26,3 +26,5 @@ export const SearchBox = () => {
     </div>
   );
 };
+
+export default SearchBox;
