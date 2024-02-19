@@ -13,12 +13,12 @@ const FeedbackSchema = Yup.object().shape({
     .required('Required'),
   number: Yup.string()
     .min(7, 'Too Short!')
-    .max(9, 'Too Long!')
-    .required('Number is required')
-    .matches(
-      /^\(?([0-9]{3})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/,
-      'Invalid phone number format (888-88-88)',
-    ),
+    .max(12, 'Too Long!')
+    .required('Number is required'),
+  // .matches(
+  //   /^\(?([0-9]{3})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/,
+  //   'Invalid phone number format (888-88-88)',
+  // ),
 });
 
 const initialValues = {
@@ -65,7 +65,7 @@ const ContactForm = () => {
             type="tel"
             name="number"
             id={numberFieldId}
-            placeholder="888-88-88"
+            placeholder="8888888"
           />
           <ErrorMessage className={css.error} name="number" component="span" />
         </div>

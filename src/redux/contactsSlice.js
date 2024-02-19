@@ -28,27 +28,8 @@ const contactsSlice = createSlice({
       },
     },
 
-    // reducer(state, action) {
-    // return [...state.items, action.payload];
-
-    // const addContact = newContact => {
-    //   setContacts(prevContacts => {
-    //     return [...prevContacts, newContact];
-    //   });
-    // };
-
     deleteContact(state, { payload }) {
       state.items = state.items.filter(contact => contact.id !== payload);
-
-      // deleteContact(state, action) {
-      //   return state.items.filter(contact => contact.id !== action.payload);
-      // },
-
-      // const deleteContact = contactId => {
-      //   setContacts(prevContacts => {
-      //     return prevContacts.filter(contact => contact.id !== contactId);
-      //   });
-      // };
     },
   },
 });
@@ -64,3 +45,26 @@ export const contactsReducer = persistReducer(
   persistConfig,
   contactsSlice.reducer,
 );
+
+// ADD
+
+// reducer(state, action) {
+// return [...state.items, action.payload];
+
+// const addContact = newContact => {
+//   setContacts(prevContacts => {
+//     return [...prevContacts, newContact];
+//   });
+// };
+
+// DELETE
+
+// deleteContact(state, action) {
+//   return state.items.filter(contact => contact.id !== action.payload);
+// },
+
+// const deleteContact = contactId => {
+//   setContacts(prevContacts => {
+//     return prevContacts.filter(contact => contact.id !== contactId);
+//   });
+// };
