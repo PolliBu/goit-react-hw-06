@@ -8,7 +8,7 @@ const SearchBox = () => {
   const filter = useSelector(getContactsFilter);
 
   const handleChangeFilter = ({ currentTarget: { value } }) => {
-    const normalizedValue = value.toLowerCase().trim();
+    const normalizedValue = value.toLowerCase();
     dispatch(setContactsFilter(normalizedValue));
   };
 
